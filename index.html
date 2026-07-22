@@ -3,112 +3,304 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Kinnect Storybooks | Family Membership — $79/year</title>
-  <meta name="description" content="Family Storybooks + private document Vault. Invite your people. Family Membership $79/year. Buy now." />
+  <title>Kinnect — Your family legacy lives here</title>
+  <meta name="description" content="A private place for your family's stories, memories, and documents. Family Membership $79/year." />
+  <meta property="og:title" content="Kinnect — Your family legacy lives here" />
+  <meta property="og:description" content="Stories. Memories. The people who matter. Private, invite-only. $79/year." />
   <style>
-    :root { --ink:#1a1714; --paper:#f7f1ea; --accent:#c4785a; --accent2:#2c4a3e; --muted:#6b635c; --card:#fff; }
+    :root {
+      --ink: #1a1714;
+      --paper: #f6f0e8;
+      --accent: #b86b52;
+      --deep: #2a3d34;
+      --muted: #6a625b;
+      --card: #fffdf9;
+      --line: rgba(26, 23, 20, 0.08);
+    }
     * { box-sizing: border-box; }
-    body { margin:0; font-family: Georgia, 'Times New Roman', serif; color:var(--ink); background:var(--paper); line-height:1.55; }
-    .wrap { max-width:720px; margin:0 auto; padding:28px 18px 110px; }
-    .brand { font-family: system-ui,sans-serif; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:20px; }
-    h1 { font-size:clamp(1.9rem,5vw,2.6rem); line-height:1.15; font-weight:500; margin:0 0 14px; }
-    .lead { font-size:1.1rem; color:var(--muted); margin:0 0 22px; }
-    .card { background:var(--card); border-radius:16px; padding:24px 20px; box-shadow:0 8px 30px rgba(26,23,20,.08); margin-bottom:18px; }
-    .price { font-family:system-ui,sans-serif; font-size:2.4rem; font-weight:700; margin:0 0 4px; }
-    .price span { font-size:1rem; font-weight:500; color:var(--muted); }
-    .plan-name { font-family:system-ui,sans-serif; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent2); margin-bottom:8px; }
-    ul { padding-left:1.1em; margin:14px 0 20px; }
-    li { margin:8px 0; }
-    .btn { display:inline-block; font-family:system-ui,sans-serif; font-weight:700; text-decoration:none; border-radius:10px; padding:14px 20px; font-size:16px; }
-    .btn-primary { background:var(--accent); color:#fff; }
-    .btn-secondary { background:transparent; color:var(--ink); border:1.5px solid var(--ink); }
-    .actions { display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
-    .fine { font-family:system-ui,sans-serif; font-size:13px; color:var(--muted); margin-top:12px; }
-    .success { display:none; background:#e8f5ef; border:1px solid #2c4a3e; border-radius:12px; padding:16px; margin-bottom:18px; font-family:system-ui,sans-serif; }
-    .success.show { display:block; }
-    h2 { font-size:1.35rem; font-weight:500; margin:8px 0 12px; }
-    .scroller { display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px 2px 16px; -webkit-overflow-scrolling:touch; }
-    .scroller::-webkit-scrollbar { height:0; }
-    .phone-card { flex:0 0 220px; scroll-snap-align:start; }
-    .phone { background:#111; border-radius:28px; padding:8px; box-shadow:0 14px 36px rgba(26,23,20,.2); }
-    .phone img { display:block; width:100%; height:390px; object-fit:cover; object-position:center; border-radius:22px; background:#ddd; }
-    .cap { font-family:system-ui,sans-serif; margin-top:8px; text-align:center; font-size:13px; }
-    .cap strong { display:block; }
-    .cap span { color:var(--muted); font-size:12px; }
-    .hint { font-family:system-ui,sans-serif; font-size:12px; color:var(--muted); margin-bottom:6px; }
-    .sticky { position:fixed; bottom:0; left:0; right:0; background:rgba(26,23,20,.94); padding:12px 14px calc(12px + env(safe-area-inset-bottom)); display:flex; gap:10px; z-index:50; }
-    .sticky a { flex:1; text-align:center; font-family:system-ui,sans-serif; font-weight:700; text-decoration:none; border-radius:10px; padding:13px 8px; font-size:15px; }
-    .sticky .buy { background:var(--accent); color:#fff; }
-    .sticky .see { color:#fff; border:1px solid rgba(255,255,255,.45); }
-    footer { margin-top:28px; font-family:system-ui,sans-serif; font-size:13px; color:var(--muted); }
-    footer a { color:var(--accent2); }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 28px 20px 120px;
+    }
+    .brand {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--deep);
+      margin-bottom: 28px;
+    }
+    .eyebrow {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      margin: 0 0 12px;
+    }
+    h1 {
+      font-size: clamp(2rem, 7vw, 2.75rem);
+      line-height: 1.12;
+      font-weight: 500;
+      margin: 0 0 16px;
+      letter-spacing: -0.02em;
+    }
+    .lead {
+      font-size: 1.125rem;
+      color: var(--muted);
+      margin: 0 0 28px;
+      max-width: 34em;
+    }
+    .success {
+      display: none;
+      background: #eaf4ef;
+      border: 1px solid var(--deep);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 22px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 15px;
+    }
+    .success.show { display: block; }
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 26px 22px;
+      box-shadow: 0 10px 36px rgba(26, 23, 20, 0.07);
+      border: 1px solid var(--line);
+      margin-bottom: 18px;
+    }
+    .plan-label {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--deep);
+      margin: 0 0 10px;
+    }
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .price {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .per {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 1rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .plan-sub {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+    .includes {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 15px;
+    }
+    .includes li {
+      position: relative;
+      padding: 10px 0 10px 28px;
+      border-top: 1px solid var(--line);
+    }
+    .includes li:last-child { border-bottom: 1px solid var(--line); }
+    .includes li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 16px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--deep);
+      opacity: 0.85;
+      box-shadow: inset 0 0 0 3px var(--card), inset 0 0 0 5px var(--deep);
+    }
+    .includes strong {
+      display: block;
+      font-weight: 650;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+    .includes span {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 12px;
+      padding: 16px 18px;
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn:active { transform: scale(0.99); }
+    .fine {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+      margin: 14px 0 0;
+    }
+    .story {
+      padding: 8px 4px 4px;
+    }
+    .story h2 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      margin: 0 0 12px;
+      line-height: 1.25;
+    }
+    .story p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .story p:last-child { margin-bottom: 0; }
+    .sticky {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+      background: rgba(26, 23, 20, 0.94);
+      backdrop-filter: blur(10px);
+      z-index: 50;
+    }
+    .sticky a {
+      display: block;
+      text-align: center;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      color: #fff;
+      background: var(--accent);
+      border-radius: 12px;
+      padding: 15px 16px;
+    }
+    footer {
+      margin-top: 28px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+    footer a { color: var(--deep); }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="brand">Kinnect</div>
-    <div id="success" class="success"><strong>You're in.</strong> Check your email for the receipt. Download the Kinnect app and sign in with the same email.</div>
-    <h1>Your family's stories deserve more than a group chat.</h1>
-    <p class="lead">Storybooks + a private document Vault, for the whole family. One membership. No ads. Buy now.</p>
 
-    <h2>See the experience</h2>
-    <p class="hint">← swipe on mobile →</p>
-    <div class="scroller">
-      <div class="phone-card">
-        <div class="phone"><img src="https://cdn.prod.website-files.com/65bc51b43da4c50b3fac8782/68d41c7ff6f1e8d33ead3b04_Placeholder%20Image.png" alt="Using Kinnect on phone" /></div>
-        <div class="cap"><strong>On your phone</strong><span>Private. Invite-only.</span></div>
-      </div>
-      <div class="phone-card">
-        <div class="phone"><img src="https://cdn.prod.website-files.com/65bc51b43da4c50b3fac8782/68f38f439617d429825c7efe_Placeholder%20Image%20(17).png" alt="Nurture family legacy" /></div>
-        <div class="cap"><strong>Legacy</strong><span>Stories that stay</span></div>
-      </div>
-      <div class="phone-card">
-        <div class="phone"><img src="https://cdn.prod.website-files.com/65bc51b43da4c50b3fac8782/68d11ea505c871ee1d6fd6eb_Frame%202087327940-2.png" alt="Family celebration" /></div>
-        <div class="cap"><strong>Birthdays</strong><span>Five days early</span></div>
-      </div>
-      <div class="phone-card">
-        <div class="phone"><img src="https://cdn.prod.website-files.com/65bc51b43da4c50b3fac8782/68ce9ece8292066079434b90_Placeholder%20Image%20(2).png" alt="Kinnect app in hand" /></div>
-        <div class="cap"><strong>Kin Groups</strong><span>Your people only</span></div>
-      </div>
+    <div id="success" class="success" hidden>
+      <strong>Welcome in.</strong>
+      Check your email for the receipt, then open the Kinnect app with the same email.
+      Your family’s stories start there.
     </div>
 
+    <p class="eyebrow">Private family membership</p>
+    <h1>Your family legacy lives here.</h1>
+    <p class="lead">
+      The stories only your people know. The memories you want kept.
+      A quiet, invite-only home for the voices that matter — not another feed.
+    </p>
+
     <div class="card">
-      <div class="plan-name">Family Membership · recommended</div>
-      <p class="price">$79 <span>/ year</span></p>
-      <ul>
-        <li><strong>Storybooks</strong> — structured, multi-chapter family stories (text or voice)</li>
-        <li><strong>Private Vault</strong> — documents with a PIN (not a password manager)</li>
-        <li><strong>Invite up to 5 people</strong> under your plan</li>
-        <li>Private Kin group · Echo · Nudge · birthdays</li>
-        <li>No ads. No data selling. Cancel anytime.</li>
+      <p class="plan-label">Family Membership</p>
+      <div class="price-row">
+        <span class="price">$79</span>
+        <span class="per">per year</span>
+      </div>
+      <p class="plan-sub">One plan for your whole circle. Cancel anytime.</p>
+
+      <ul class="includes">
+        <li>
+          <strong>Storybooks</strong>
+          <span>Capture family stories in chapters — text or voice — so nothing precious stays stuck in a chat thread.</span>
+        </li>
+        <li>
+          <strong>A private place for documents</strong>
+          <span>Keep wills, policies, and care notes with the family who needs them — simple PIN protection, not a password manager.</span>
+        </li>
+        <li>
+          <strong>Your people, invited by you</strong>
+          <span>Up to five people on your plan. Private Kin groups. No strangers, no ads, no public feed.</span>
+        </li>
+        <li>
+          <strong>Gentle rhythms that keep you close</strong>
+          <span>Daily Echo questions, birthday reminders, and Nudges — so connection doesn’t depend on remembering alone.</span>
+        </li>
       </ul>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://buy.stripe.com/fZu3cv1lJbA56A72tk5sA08" rel="noopener">Buy now — $79/year</a>
-        <a class="btn btn-secondary" href="https://buy.stripe.com/eVqcN53tR9rX9Mj1pg5sA09" rel="noopener">$99/year option</a>
-      </div>
-      <p class="fine">Secure checkout via Stripe.</p>
+
+      <a class="btn" href="https://buy.stripe.com/fZu3cv1lJbA56A72tk5sA08" rel="noopener">
+        Begin your family’s Storybook — $79/year
+      </a>
+      <p class="fine">Secure checkout. You’ll get a receipt by email right away.</p>
     </div>
 
-    <div class="card">
-      <strong style="font-family:system-ui,sans-serif">Why not $10–$20?</strong>
-      <p style="font-family:system-ui,sans-serif;font-size:14px;color:var(--muted);margin:10px 0 0">Competitors charge $50–$100+/yr for storybooks alone. Kinnect bundles Storybooks + Vault + family membership at <strong style="color:var(--ink)">$79/year</strong>.</p>
+    <div class="card story">
+      <h2>Built for memories that shouldn’t disappear.</h2>
+      <p>
+        Group chats scroll. Photos scatter. Stories get lost when someone is gone.
+        Kinnect is where your family keeps the real stuff — private, permanent, and yours.
+      </p>
+      <p>
+        Not social media. A membership for the people who already matter.
+      </p>
     </div>
 
     <footer>
-      <a href="https://www.kinnect.club/">kinnect.club</a> ·
-      <a href="https://kinnectclub.github.io/kinnect-web-funnel/experience/">Mobile tour + ads</a> ·
-      <a href="https://www.kinnect.club/storybooks">Storybooks</a> ·
-      <a href="https://www.kinnect.club/feature/echo">Echo</a>
+      <a href="https://www.kinnect.club/">kinnect.club</a>
+      ·
+      <a href="https://www.kinnect.club/storybooks">Storybooks</a>
+      ·
+      <a href="https://www.kinnect.club/legal/terms-and-conditions">Terms</a>
     </footer>
   </div>
+
   <div class="sticky">
-    <a class="buy" href="https://buy.stripe.com/fZu3cv1lJbA56A72tk5sA08">Buy $79/yr</a>
-    <a class="see" href="https://kinnectclub.github.io/kinnect-web-funnel/experience/">See tour + ads</a>
+    <a href="https://buy.stripe.com/fZu3cv1lJbA56A72tk5sA08">Start for $79/year</a>
   </div>
+
   <script>
-    if (new URLSearchParams(location.search).get('checkout') === 'success') {
-      document.getElementById('success').classList.add('show');
-    }
+    (function () {
+      var ok = new URLSearchParams(location.search).get("checkout") === "success";
+      var el = document.getElementById("success");
+      if (ok && el) {
+        el.hidden = false;
+        el.classList.add("show");
+        el.style.display = "block";
+      }
+    })();
   </script>
 </body>
 </html>
