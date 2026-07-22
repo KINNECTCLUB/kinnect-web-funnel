@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>See Kinnect — Mobile experience + ads</title>
+<style>
+:root{--ink:#1a1714;--paper:#f4ebe3;--accent:#c4785a;--muted:#6b635c}
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,serif;color:var(--ink);background:var(--paper)}
+header{padding:20px 16px;max-width:520px;margin:0 auto}.brand{font-family:system-ui,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:1.85rem;font-weight:500;line-height:1.12}.lead{font-family:system-ui,sans-serif;font-size:15px;color:var(--muted)}
+.chip{display:inline-block;font-family:system-ui,sans-serif;font-size:13px;font-weight:700;background:var(--ink);color:#fff;padding:6px 12px;border-radius:999px}
+h2{font-size:1.15rem;max-width:520px;margin:20px auto 8px;padding:0 16px}
+.scroller{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 16px 24px}
+.phone-card{flex:0 0 270px;scroll-snap-align:center}.phone{background:#111;border-radius:34px;padding:9px;box-shadow:0 18px 44px rgba(0,0,0,.2)}
+.phone img{display:block;width:100%;height:500px;object-fit:cover;object-position:top;border-radius:26px}
+.cap{font-family:system-ui,sans-serif;margin-top:10px;text-align:center}.cap strong{display:block;font-size:14px}.cap span{font-size:12px;color:var(--muted)}
+.ad-grid{display:grid;gap:10px;padding:0 16px 20px;max-width:520px;margin:0 auto}
+.ad-grid img{width:100%;border-radius:12px;display:block;box-shadow:0 6px 18px rgba(0,0,0,.1)}
+.btn{display:block;margin:0 16px 20px;max-width:520px;margin-left:auto;margin-right:auto;text-align:center;font-family:system-ui,sans-serif;font-weight:700;text-decoration:none;border-radius:12px;padding:14px;background:var(--accent);color:#fff}
+.sticky{position:sticky;bottom:0;background:rgba(26,23,20,.95);padding:12px 16px;display:flex}
+.sticky a{flex:1;text-align:center;font-family:system-ui,sans-serif;font-weight:700;text-decoration:none;border-radius:10px;padding:14px;background:var(--accent);color:#fff}
+</style></head><body>
+<header>
+<div class="brand">Kinnect · mobile web</div>
+<h1>See the experience. Then buy.</h1>
+<p class="lead">Real mobile screenshots from kinnect.club + ad creatives.</p>
+<span class="chip">Family Membership · $79/year</span>
+</header>
+<h2>Product tour · swipe →</h2>
+<div class="scroller">
+<div class="phone-card"><div class="phone"><img src="home.jpg" alt="Home"/></div><div class="cap"><strong>Home</strong><span>Private family OS</span></div></div>
+<div class="phone-card"><div class="phone"><img src="storybooks.jpg" alt="Storybooks"/></div><div class="cap"><strong>Storybooks</strong><span>Family stories</span></div></div>
+<div class="phone-card"><div class="phone"><img src="echo.jpg" alt="Echo"/></div><div class="cap"><strong>Echo</strong><span>One question a day</span></div></div>
+<div class="phone-card"><div class="phone"><img src="funnel.jpg" alt="Buy"/></div><div class="cap"><strong>Buy now</strong><span>$79/year</span></div></div>
+</div>
+<h2>Ad creatives</h2>
+<div class="ad-grid">
+<img src="ad-story-916.jpg" alt="Story ad"/>
+<img src="ad-square-11.jpg" alt="Square ad"/>
+<img src="ad-feed-home-45.jpg" alt="Feed ad"/>
+</div>
+<a class="btn" href="https://buy.stripe.com/fZu3cv1lJbA56A72tk5sA08">Buy Family Membership — $79/yr</a>
+<div class="sticky"><a href="https://buy.stripe.com/fZu3cv1lJbA56A72tk5sA08">Buy $79/yr</a></div>
+</body></html>
